@@ -112,7 +112,7 @@ theme.
     overflow-x: hidden;
     font-size: 16px;
     line-height: 1.4;
-    font-family: "Circular Std Book";
+    font-family: "Poppins";
     -moz-osx-font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
 }
@@ -18197,4 +18197,8 @@ SaaSio - HR Management
 
 .des-tec-icons i {
     padding: 20px 10px 10px 0px
+}
+
+.screenshoot-vector{
+    position: absolute !important;
 }
