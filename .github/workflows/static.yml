@@ -40,3 +40,10 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+      
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.2
+        with:
+          server: ftp.techsirenblog.com
+          username: xempler_u@xempler.com
+          password: ${{ secrets.FTP_PASSWORD }}
