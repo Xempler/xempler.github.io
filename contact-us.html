@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="assets/css/odometer-theme-default.css" />
     <link rel="stylesheet" href="assets/css/flaticon.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/simple-notify.min.css" />
     <meta property="og:title" content="Xempler | Simply Excellent" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://xempler.com" />
@@ -140,7 +141,7 @@
           <h2>Contact <span>Us </span></h2>
         </div>
         <div class="sa-contact-inner-form">
-          <form action="contact.php">
+          <form action="">
             <div class="row">
               <div class="col-md-6">
                 <input type="text" name="name" placeholder="Your Full Name" />
@@ -169,7 +170,7 @@
                 ></textarea>
               </div>
               <div class="sa-contact-inner-btn text-center">
-                <button type="submit">Send Message</button>
+                <button id="submit-button" type="submit">Send Message</button>
               </div>
             </div>
           </form>
@@ -322,5 +323,30 @@
     <script src="assets/js/typer-new.js"></script>
     <script src="assets/js/odometer.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/simple-notify.min.js"></script>
+    <script>
+      const btn = document.querySelector("#submit-button");
+
+      btn.addEventListener("click", () => {
+        new Notify({
+          status: "success",
+          title: "Thank you!",
+          text: "We will contact you soon.",
+          effect: "fade",
+          speed: 300,
+          customClass: "",
+          customIcon: "",
+          showIcon: true,
+          showCloseButton: true,
+          autoclose: true,
+          autotimeout: 3000,
+          gap: 20,
+          distance: 20,
+          type: 1,
+          position: "x-center bottom",
+          customWrapper: "",
+        });
+      });
+    </script>
   </body>
 </html>
